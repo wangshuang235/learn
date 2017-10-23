@@ -14,6 +14,7 @@
         <module>mybatis</module>
         <module>hibernate</module>
         <module>servlet</module>
+        <module>mongo</module>
     </modules>
 
 
