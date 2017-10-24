@@ -15,6 +15,7 @@
         <module>hibernate</module>
         <module>servlet</module>
         <module>mongo</module>
+        <module>myservlert</module>
     </modules>
 
 
