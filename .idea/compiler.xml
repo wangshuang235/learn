@@ -25,16 +25,18 @@
         <module name="hibernate" />
         <module name="mongo" />
         <module name="mybatis" />
+        <module name="myservlert" />
         <module name="servlet" />
         <module name="spring" />
         <module name="spring-mvc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="com.ws" target="1.5" />
       <module name="hibernate" target="1.5" />
-      <module name="mongo" target="1.5" />
+      <module name="learn" target="1.5" />
+      <module name="mongo" target="1.6" />
       <module name="mybatis" target="1.5" />
+      <module name="myservlert" target="1.5" />
       <module name="servlet" target="1.5" />
       <module name="spring" target="1.5" />
       <module name="spring-mvc" target="1.5" />

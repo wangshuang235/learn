@@ -5,8 +5,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
 
-    <mongo:repositories base-package="com.tribalc.*.repositories"
-                        base-class="com.tribalc.mongodb.repositories.TribalcRepositoryImpl"/>
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:mongodb-test.properties"/>
+    </bean>
+
+    <mongo:repositories base-package="com.learn.*.repositories"
+                        base-class="repositories.TribalcRepositoryImpl"/>
     <mongo:mongo-client id="mongoClient" host="${mongodb.host}" port="${mongodb.port}" credentials="${mongodb.credentials}"/>
     <mongo:db-factory dbname="${mongodb.database}" mongo-ref="mongoClient" authentication-dbname="admin"/>
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
