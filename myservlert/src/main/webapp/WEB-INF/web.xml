@@ -7,6 +7,11 @@
   <servlet>
     <servlet-name>my-servlet</servlet-name>
     <servlet-class>com.ws.MyServlet</servlet-class>
+    <init-param>
+      <param-name>ws</param-name>
+      <param-value>williwaw's</param-value>
+    </init-param>
+      <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>my-servlet</servlet-name>
