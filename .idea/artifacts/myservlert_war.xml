@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="myservlert:war">
-    <output-path>$PROJECT_DIR$/myservlert/target</output-path>
-    <root id="archive" name="myservlert.war">
-      <element id="artifact" artifact-name="myservlert:war exploded" />
-    </root>
-  </artifact>
-</component>

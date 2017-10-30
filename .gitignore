@@ -1,6 +1,11 @@
+#Mac
+.DS_Store
 
-#IDEA
-
-*.iml
+# IDEA
 .idea/
+*.iml
+
+# maven
 target/
+out/
+!/.mvn/wrapper/maven-wrapper.jar
