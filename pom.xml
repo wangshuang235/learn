@@ -13,7 +13,6 @@
         <module>spring-mvc</module>
         <module>mybatis</module>
         <module>hibernate</module>
-        <module>servlet</module>
         <module>mongo</module>
         <module>myservlert</module>
     </modules>
