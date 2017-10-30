@@ -54,11 +54,11 @@ public class MyServlet extends HttpServlet {
 
     @Override
     public void destroy() {
-        System.out.println("destroy");
+        //System.out.println("destroy");
     }
 
     @Override
     public void init() throws ServletException {
-        System.out.println("init");
+        //System.out.println("init");
     }
 }
