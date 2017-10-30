@@ -5,17 +5,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-/**
- * Created by ShuangWang on 2017/10/25.
- */
-@WebServlet(name = "my", urlPatterns = "/me")
-public class MyServlet_1 extends HttpServlet {
+@WebServlet(urlPatterns = "/session")
+public class SessionServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().write("this is me");
-        Object name = getServletContext().getAttribute("name");
-        System.out.print(name.toString());
+        HttpSession session = req.getSession();
+        session.setAttribute("name", "wangshuang");
+        System.out.println("session保存");
     }
 }
