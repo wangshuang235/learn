@@ -21,6 +21,7 @@ public abstract class BaseTest {
         person.setName("王爽");
         person = repositiry.insert(person);
         System.out.println(person.toString());
+        // 王爽测试合并分支
     }
 }
 
