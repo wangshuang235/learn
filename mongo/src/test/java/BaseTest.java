@@ -21,6 +21,8 @@ public abstract class BaseTest {
         person.setName("王爽");
         person = repositiry.insert(person);
         System.out.println(person.toString());
+
+        //再次merge到ws分支
     }
 }
 
