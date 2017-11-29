@@ -65,7 +65,7 @@ public class MyArrayList<T> implements Iterable<T>{
     }
 
     public boolean add(T t) {
-        add(size(), t);
+        add(size()+1, t);
         return true;
     }
 

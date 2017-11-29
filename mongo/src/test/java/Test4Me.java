@@ -21,10 +21,10 @@ public class Test4Me {
 
     @Test
     public void test1() {
-        /*ArrayList<String> list = new ArrayList();
+        MyArrayList<String> list = new MyArrayList();
         list.add("wangshuang");
         System.out.println(list.size());
-        System.out.println(list.get(0));*/
+        System.out.println(list.get(0));
 
     }
 
