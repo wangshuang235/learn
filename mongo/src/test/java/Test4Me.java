@@ -1,10 +1,7 @@
 import org.junit.Test;
 
 import java.text.DateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
+import java.util.*;
 
 public class Test4Me {
     @Test
@@ -29,5 +26,20 @@ public class Test4Me {
         System.out.println(list.size());
         System.out.println(list.get(0));*/
 
+    }
+
+    @Test
+    public void test2() {
+        LinkedList<Integer> list = new LinkedList<Integer>();
+        for (int i = 1; i < 400000; i++) {
+            list.add(i);
+        }
+
+        Iterator<Integer> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            iterator.next();
+            iterator.remove();
+        }
+        System.out.println(list.size());
     }
 }
