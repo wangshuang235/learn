@@ -48,12 +48,12 @@ public class MyArrayList<T> implements Iterable<T>{
         return old;
     }
 
-    public void doClear() {
+    private void doClear() {
         theSize = 0;
         ensureCapacity(DEFAULT_CAPACITY);
     }
 
-    public void ensureCapacity(int newCapacity) {
+    private void ensureCapacity(int newCapacity) {
         if (newCapacity < theSize) {
             return;
         }
@@ -65,7 +65,7 @@ public class MyArrayList<T> implements Iterable<T>{
     }
 
     public boolean add(T t) {
-        add(size()+1, t);
+        add(size(), t);
         return true;
     }
 
@@ -77,6 +77,7 @@ public class MyArrayList<T> implements Iterable<T>{
             theItems[i] = theItems[i - 1];
         }
         theItems[idx] = t;
+        theSize++;
     }
 
     public T remove(int idx) {
@@ -90,7 +91,7 @@ public class MyArrayList<T> implements Iterable<T>{
 
     @Override
     public Iterator<T> iterator() {
-        return null;
+        return new ArrayListIterator();
     }
 
     private class ArrayListIterator implements java.util.Iterator<T> {

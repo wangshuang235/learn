@@ -23,6 +23,53 @@ public class Test4Me {
     public void test1() {
         MyArrayList<String> list = new MyArrayList();
         list.add("wangshuang");
+        list.add("wangshuang");
+        list.add("wangshuang");
+        System.out.println(list.size());
+        list.set(0, "cool");
+        list.add(0,"w");
+        System.out.println(list.size());
+        System.out.println("-----------Start-----------");
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+        System.out.println("-----------End-----------");
+
+        System.out.println(list.get(0));
+        System.out.println(list.isEmpty());
+        list.clear();
+        System.out.println(list.isEmpty());
+
+    }
+
+    @Test
+    public void test3() {
+        ArrayList<String> list = new ArrayList();
+        list.add("wangshuang");
+        list.add("wangshuang");
+        list.add("wangshuang");
+        System.out.println(list.size());
+        System.out.println(list.get(0));
+
+    }
+
+    @Test
+    public void test4() {
+        MyLinkedList<String> list = new MyLinkedList();
+        list.add("wangshuang1");
+        list.add("wangshuang2");
+        list.add("wangshuang3");
+        System.out.println(list.size());
+        System.out.println(list.get(0));
+
+    }
+
+    @Test
+    public void test5() {
+        LinkedList<String> list = new LinkedList();
+        list.add("wangshuang");
+        list.remove(1);
         System.out.println(list.size());
         System.out.println(list.get(0));
 
