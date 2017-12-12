@@ -62,6 +62,11 @@ public class Test4Me {
         list.add("wangshuang3");
         System.out.println(list.size());
         System.out.println(list.get(0));
+        Iterator<String> iterator = list.iterator();
+        System.out.println("------------------------");
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
 
     }
 
@@ -69,7 +74,6 @@ public class Test4Me {
     public void test5() {
         LinkedList<String> list = new LinkedList();
         list.add("wangshuang");
-        list.remove(1);
         System.out.println(list.size());
         System.out.println(list.get(0));
 
@@ -88,5 +92,24 @@ public class Test4Me {
             iterator.remove();
         }
         System.out.println(list.size());
+    }
+
+    @Test
+    public void test6() {
+        HashMap<String, String> hashMap = new HashMap<String, String>();
+        hashMap.put("wang", "cool");
+    }
+
+    @Test
+    public void test7() {
+        MySinglyLinkedList<String> list = new MySinglyLinkedList<String>();
+        list.push("cool1");
+        list.push("cool2");
+        list.push("cool3");
+        list.push("cool4");
+        list.push("cool5");
+        while (list.size() > 0) {
+            System.out.println(list.pop());
+        }
     }
 }

@@ -110,19 +110,38 @@ public class MyLinkedList<T> implements Iterable<T> {
     }
 
     private class LinkedListIterator implements java.util.Iterator<T> {
+
+        private Node<T> current = beginMarker.next;
+        private int expectedModCount = modCount;
+        private boolean okToRemove = false;
+
         @Override
         public boolean hasNext() {
-            return false;
+            return current != endMarker;
         }
 
         @Override
         public T next() {
-            return null;
+            if (modCount != expectedModCount)
+                throw new java.util.ConcurrentModificationException();
+            if (!hasNext())
+                throw new java.util.NoSuchElementException();
+            T nextItem = current.data;
+            current = current.next;
+            okToRemove = true;
+            return nextItem;
         }
 
         @Override
         public void remove() {
+            if (modCount != expectedModCount){
+                throw new java.util.ConcurrentModificationException();}
+            if (!okToRemove)
+                throw new IllegalStateException();
 
+            MyLinkedList.this.remove(current.prev);
+            expectedModCount++;
+            okToRemove = false;
         }
     }
 
