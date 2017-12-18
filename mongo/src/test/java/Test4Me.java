@@ -1,3 +1,7 @@
+import collection.test.BinarySearchTree;
+import collection.test.MyArrayList;
+import collection.test.MyLinkedList;
+import collection.test.MySinglyLinkedList;
 import org.junit.Test;
 
 import java.text.DateFormat;
@@ -111,5 +115,18 @@ public class Test4Me {
         while (list.size() > 0) {
             System.out.println(list.pop());
         }
+    }
+
+    @Test
+    public void test8() {
+        BinarySearchTree<Integer> tree = new BinarySearchTree<Integer>();
+        tree.insert(6);
+        tree.insert(2);
+        tree.insert(8);
+        tree.insert(4);
+        tree.insert(1);
+        tree.insert(3);
+        tree.insert(5);
+        tree.printTree();
     }
 }

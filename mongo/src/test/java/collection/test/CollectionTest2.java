@@ -1,3 +1,5 @@
+package collection.test;
+
 import org.bson.types.ObjectId;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,3 +1,5 @@
+package collection.test;
+
 import java.util.Iterator;
 
 /**
