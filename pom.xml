@@ -15,6 +15,8 @@
         <module>hibernate</module>
         <module>mongo</module>
         <module>myservlert</module>
+        <module>struts-test</module>
+        <module>mystruts</module>
     </modules>
 
     <build>

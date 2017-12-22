@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts>
+    <package>
+        <action name = "login" class = "" method = "">
+            <result name = "" type = ""></result>
+        </action>
+
+        <action name = "login" class = "" method = "">
+            <result name = "" type = ""></result>
+        </action>
+    </package>
+</struts>
