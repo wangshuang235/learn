@@ -17,6 +17,7 @@
         <module>myservlert</module>
         <module>struts-test</module>
         <module>mystruts</module>
+        <module>jdbc</module>
     </modules>
 
     <build>

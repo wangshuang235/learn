@@ -14,7 +14,7 @@ public class DoTest {
     public void testIOC() throws Exception {
         //加载spring配置文件
         ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        Person person = (Person) ac.getBean("person1");
+        Person person = ac.getBean("person1",  Person.class);
         System.out.println(person);
     }
 }
