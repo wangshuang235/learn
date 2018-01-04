@@ -5,13 +5,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 import org.junit.Test;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -38,6 +36,7 @@ public class App2 {
 
         //HQL查询,查询全部
         Query q = session.createQuery("from Employee");
+        //can,t resolve symbol
         List<Employee> list = q.list();
 
         System.out.println(list);

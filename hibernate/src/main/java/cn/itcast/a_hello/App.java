@@ -6,7 +6,6 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.junit.Test;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -23,7 +22,7 @@ public class App {
     @Test
     public void testHello() {
         Employee emp = new Employee();
-        emp.setEmpName("班长");
+        emp.setEmpName("班长3");
         emp.setWorkDate(new Date());
 
         //读取配置文件

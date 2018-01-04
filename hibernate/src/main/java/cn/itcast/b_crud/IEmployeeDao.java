@@ -21,4 +21,6 @@ public interface IEmployeeDao {
     List<Employee> getAll(String employeeName);
 
     List<Employee> getAll(int index, int count);
+
+    void delete(Serializable id);
 }
