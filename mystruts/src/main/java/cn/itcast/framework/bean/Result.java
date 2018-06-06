@@ -1,18 +1,18 @@
 package cn.itcast.framework.bean;
 
 /**
- * ·â×°½á¹ûÊÓÍ¼
+ * å°è£…ç»“æœè§†å›¾
  * <result name="success" type="redirect">/index.jsp</result>
  * @author Jie.Yuan
  *
  */
 public class Result {
 
-	// Ìø×ªµÄ½á¹û±ê¼Ç
+	// è·³è½¬çš„ç»“æœæ ‡è®°
 	private String name;
-	// Ìø×ªÀàĞÍ£¬Ä¬ÈÏÎª×ª·¢£» "redirect"ÎªÖØ¶¨Ïò
+	// è·³è½¬ç±»å‹ï¼Œé»˜è®¤ä¸ºè½¬å‘ï¼› "redirect"ä¸ºé‡å®šå‘
 	private String type;
-	// Ìø×ªµÄÒ³Ãæ
+	// è·³è½¬çš„é¡µé¢
 	private String page;
 	public String getName() {
 		return name;
