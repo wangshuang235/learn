@@ -19,6 +19,7 @@
         <module>mystruts</module>
         <module>jdbc</module>
         <module>spring-data-jpa</module>
+        <module>spring-test</module>
     </modules>
 
     <build>
