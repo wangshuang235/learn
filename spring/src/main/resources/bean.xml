@@ -9,13 +9,13 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!--<bean id="person1" class="cn.ws.entites.Person">
+    <bean id="person1" class="cn.ws.entites.Person">
         <property name="name" value="ws"></property>
     </bean>
-    <bean id="person2" class="cn.ws.entites.Person">
+    <bean id="person2" class="cn.ws.entites.Pperson">
         <property name="name" value="ws"></property>
-    </bean>-->
-    <context:component-scan base-package="cn.ws"/>
+    </bean>
+    <context:component-scan base-package="cn.ws.entites"/>
 </beans>
 
 

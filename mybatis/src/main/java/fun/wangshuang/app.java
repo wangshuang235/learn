@@ -25,7 +25,7 @@ public class app {
         InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession session = sqlSessionFactory.openSession();
-        Object employee = session.selectOne("EmployeeMapper.selectEmployee", 2);
+        Object employee = session.selectOne("EmployeeMapper.selectEmployee", 1);
         //EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
         //Employee employee = mapper.selectEmployee(2);
         System.out.println(employee);

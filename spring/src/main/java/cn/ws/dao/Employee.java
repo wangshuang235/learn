@@ -1,13 +1,11 @@
-package fun.wangshuang;
-import org.apache.ibatis.type.Alias;
+package cn.ws.dao;
 
-import java.util.Date;
+import org.apache.ibatis.type.Alias;
 
 /**
  * @author cool
  * Date 2017-12-27 10:53
  */
-@Alias("emp")
 public class Employee {
     private int empId;
     private String empName;

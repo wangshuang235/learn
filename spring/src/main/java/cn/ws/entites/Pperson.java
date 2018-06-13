@@ -1,12 +1,10 @@
 package cn.ws.entites;
 
-import org.springframework.stereotype.Component;
-
 /**
  * Created by ShuangWang on 2017/7/11.
  */
 
-public class Person {
+public class Pperson {
     private int pId;
     private String name;
 

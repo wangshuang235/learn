@@ -1,4 +1,4 @@
-package cn.ws.dao;/*
+/*
 package cn.ws.dao;
 
 

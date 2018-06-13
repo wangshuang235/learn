@@ -4,6 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="EmployeeMapper">
     <select id="selectEmployee" resultType="emp">
-        select * from employee where id = #{id}
+        select * from employee where empId = #{id}
     </select>
 </mapper>

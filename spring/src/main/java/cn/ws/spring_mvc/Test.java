@@ -1,4 +1,4 @@
-package spring_mvc;
+package cn.ws.spring_mvc;
 
 /*
  * @Author: cool
