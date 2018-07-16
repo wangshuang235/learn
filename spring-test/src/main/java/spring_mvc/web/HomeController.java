@@ -1,7 +1,10 @@
 package spring_mvc.web;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import spring_mvc.dao.UserDao;
@@ -14,20 +17,30 @@ import spring_mvc.entity.User;
 @Controller
 public class HomeController {
 
+    private static Logger logger = LoggerFactory.getLogger(HomeController.class);
+
+
+
     @Autowired
     private UserDao userDao;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String home() {
+        logger.info("开始处理");
+        logger.info("处理完成");
         return "home";
     }
 
     @RequestMapping(value = "/getUser", method = RequestMethod.GET)
-    public String getUser() {
-        User cool1 = userDao.findByName("张三");
+    public String getUser(Model model) {
+
+        logger.info("开始处理");
+        /*User cool1 = userDao.findByName("张三");
         User user = new User(3333L, "cool");
-        user = userDao.save(user);
-        User cool = userDao.findByName("cool");
+        user = userDao.save(user);*/
+        User user = userDao.findByName("张三");
+        model.addAttribute(user);
+        logger.info("处理完成");
         return "home";
     }
 }

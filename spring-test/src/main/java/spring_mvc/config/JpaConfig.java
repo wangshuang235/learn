@@ -48,7 +48,8 @@ public class JpaConfig {
         adapter.setDatabase(Database.MYSQL);
         adapter.setShowSql(true);
         adapter.setGenerateDdl(false);
-        adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
+        //adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
+        adapter.setDatabasePlatform("org.hibernate.dialect.MySQL5InnoDBDialect");
         return adapter;
     }
 
