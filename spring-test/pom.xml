@@ -85,6 +85,7 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.0</version>
+
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -183,8 +184,63 @@
 
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <profiles.action>dev</profiles.action>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <profiles.action>test</profiles.action>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <finalName>spring-test</finalName>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5</version>
+                <configuration>
+                    <source>1.8</source><!-- 指定source和target的版本 -->
+                    <target>1.8</target>
+                    <encoding>UTF8</encoding> <!-- 指定编译的编码格式 -->
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <excludes>
+                    <exclude>dev/*</exclude>
+                    <exclude>test/*</exclude>
+                </excludes>
+            </resource>
+
+            <resource>
+                <directory>${project.basedir}/src/main/resources/${profiles.action}</directory>
+                <filtering>true</filtering>
+            </resource>
+            <!--<resource>
+                <directory>${project.basedir}/src/main/java</directory>
+                <includes>
+                <include>**/*.xml</include>
+                </includes>
+                &lt;!&ndash;是否替换资源中的属性&ndash;&gt;
+                <filtering>true</filtering>
+            </resource>-->
+        </resources>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+
+<classPathEntry location="./mysql-connector-java-5.1.10-bin.jar" />
+
+<context id="phoenix"  targetRuntime="MyBatis3">
+	<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://47.94.9.219:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false" userId="root" password="20180517WS&amp;ls" />
+
+	<!-- 文件生成路径 -->
+	<javaModelGenerator targetPackage="fun.wangshuang.entity" targetProject="../mybatis/src/main/java"  />
+	<sqlMapGenerator targetPackage="fun.wangshuang.sqlMap" targetProject="../mybatis/src/main/java" />
+	<javaClientGenerator targetPackage="fun.wangshuang.mapper" targetProject="../mybatis/src/main/java"  type="XMLMAPPER"/>
+
+	<!-- 需要进行映射的数据库表 -->
+<!--  	
+<table tableName="t_customer"></table>
+   <table tableName="t_customer_address"></table>
+   <table tableName="t_customer_finance"></table>
+   <table tableName="t_application_applicant"></table>
+   <table tableName="T_APPLICATION_MAIN"></table>
+	<table tableName="t_application_progress"></table> 
+	<table tableName="t_application_insured"></table>
+	<table tableName="t_application_applicant"></table>	-->
+	<table tableName="sys_user"></table>
+</context>
+
+</generatorConfiguration>

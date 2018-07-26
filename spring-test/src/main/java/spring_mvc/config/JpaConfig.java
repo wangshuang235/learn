@@ -1,8 +1,10 @@
 package spring_mvc.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
@@ -18,9 +20,20 @@ import javax.sql.DataSource;
  * @Author: cool
  * @Date: 2018/6/12 17:04
  */
+
 @Configuration
+@PropertySource("classpath:/jdbc.properties")
 @EnableJpaRepositories(basePackages = "spring_mvc")
 public class JpaConfig {
+
+    @Value("${jdbc.url}")
+    private String url;
+
+    @Value("${jdbc.username}")
+    private String username;
+
+    @Value("${jdbc.password}")
+    private String password;
 
    /* @Bean
     public DataSource h2DataSource() {
@@ -33,9 +46,9 @@ public class JpaConfig {
     @Bean(destroyMethod = "close")
     public DruidDataSource dataSource() {
         DruidDataSource dataSource = new DruidDataSource();
-        dataSource.setUrl("jdbc:mysql://47.94.9.219:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false");
-        dataSource.setUsername("root");
-        dataSource.setPassword("20180517WS&ls");
+        dataSource.setUrl(url);
+        dataSource.setUsername(username);
+        dataSource.setPassword(password);
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setMaxActive(50);
         dataSource.setMinIdle(15);

@@ -21,7 +21,6 @@
         <module>spring-data-jpa</module>
         <module>spring-test</module>
     </modules>
-
     <build>
         <plugins>
             <plugin>

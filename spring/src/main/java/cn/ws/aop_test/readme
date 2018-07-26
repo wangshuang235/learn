@@ -1,0 +1,8 @@
+
+类的静态方法不能被aop拦截到
+public class HttpUtil {
+
+    public static void test() {
+        System.out.println("HttpUtil.test");
+    }
+}

@@ -40,5 +40,10 @@ public class app {
         configuration.addMapper(BlogMapper.class);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);*/
     }
+
+    @Test
+    public void test_3() {
+
+    }
 }
 

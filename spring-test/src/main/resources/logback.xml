@@ -3,8 +3,9 @@
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
 
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<file>/app/phoenix-log/server.out</file>
 		<encoder>
-			<pattern>[@@][%d][%t][%C][%p][%m]%n</pattern>
+			<pattern>[@sss@][%d][%t][%C][%p][%m]%n</pattern>
 		</encoder>
 	</appender>
 	

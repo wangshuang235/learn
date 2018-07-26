@@ -9,6 +9,16 @@
     <param-name>logbackConfigLocation</param-name>
     <param-value>classpath:logback.xml</param-value>
   </context-param>
+
+  <filter>
+    <filter-name>logFilter</filter-name>
+    <filter-class>spring_mvc.web.LogFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>logFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
   <listener>
     <listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>
   </listener>
