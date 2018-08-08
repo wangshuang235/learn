@@ -20,6 +20,8 @@
         <module>jdbc</module>
         <module>spring-data-jpa</module>
         <module>spring-test</module>
+        <module>spring-mvc-xml</module>
+        <module>spring-mcv-javaconfig</module>
     </modules>
     <build>
         <plugins>
