@@ -10,7 +10,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spring</module>
-        <module>spring-mvc</module>
         <module>mybatis</module>
         <module>hibernate</module>
         <module>mongo</module>
@@ -18,7 +17,6 @@
         <module>struts-test</module>
         <module>mystruts</module>
         <module>jdbc</module>
-        <module>spring-data-jpa</module>
         <module>spring-test</module>
         <module>spring-mvc-xml</module>
         <module>spring-mcv-javaconfig</module>
