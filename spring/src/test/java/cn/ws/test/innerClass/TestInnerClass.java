@@ -1,4 +1,4 @@
-package cn.ws.test;
+package cn.ws.test.innerClass;
 
 import org.junit.Test;
 

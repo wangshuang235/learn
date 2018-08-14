@@ -1,4 +1,4 @@
-package cn.ws.test;
+package cn.ws.test.spring;
 
 import cn.ws.entites.Person;
 import org.junit.Test;

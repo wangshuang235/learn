@@ -1,8 +1,4 @@
-package cn.ws.test;
-
-import org.junit.Test;
-
-import java.io.UnsupportedEncodingException;
+package cn.ws.test.innerClass;
 
 /*
  * @Author: cool

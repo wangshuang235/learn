@@ -2,11 +2,11 @@ package cn.ws.test;
 
 import org.junit.Test;
 
-/*
+/**
  * @Author: cool
  * @Date: 2018/7/24 14:43
  */
-public class TestStringBuffer {
+public class DoDoTest {
     @Test
     public void test() {
         StringBuffer buffer = new StringBuffer();

@@ -1,4 +1,4 @@
-package cn.ws.test;
+package cn.ws.test.extend;
 
 import org.junit.Test;
 
