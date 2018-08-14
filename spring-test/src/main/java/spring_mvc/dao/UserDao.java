@@ -8,7 +8,7 @@ import spring_mvc.entity.User;
  * @Author: cool
  * @Date: 2018/6/12 17:18
  */
-@Repository
+//@Repository
 public interface UserDao extends JpaRepository<User, Long> {
     User findByName(String name);
 }

@@ -21,8 +21,8 @@ public class HomeController {
 
 
 
-    @Autowired
-    private UserDao userDao;
+/*    @Autowired
+    private UserDao userDao;*/
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String home() {
@@ -37,8 +37,8 @@ public class HomeController {
         /*User cool1 = userDao.findByName("张三");
         User user = new User(3333L, "cool");
         user = userDao.save(user);*/
-        User user = userDao.findByName("张三");
-        model.addAttribute(user);
+/*        User user = userDao.findByName("张三");*/
+/*        model.addAttribute(user);*/
         return "home";
     }
 }
