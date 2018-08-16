@@ -50,6 +50,24 @@
 
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <profiles.action>dev</profiles.action>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>uat</id>
+            <properties>
+                <profiles.action>test</profiles.action>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <finalName>spring-mvc-xml</finalName>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -85,5 +103,37 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+
+        <!--排除不要的-->
+        <!--config/**/*.properties排除config文件夹下所有以properties结尾的文件-->
+        <!--<resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <excludes>
+                    <exclude>config/dev/*</exclude>
+                    <exclude>config/product/*</exclude>
+                    <exclude>config/uat/*</exclude>
+
+                </excludes>
+            </resource>
+
+            <resource>
+                <directory>${project.basedir}/src/main/resources/config/${profiles.action}</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>-->
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <includes>
+                    <include>*</include>
+                </includes>
+            </resource>
+
+            <resource>
+                <directory>${project.basedir}/src/main/resources/config/${profiles.action}</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 </project>
