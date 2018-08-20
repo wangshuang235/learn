@@ -21,6 +21,7 @@
         <module>spring-mvc-xml</module>
         <module>spring-mvc-javaconfig</module>
         <module>spring-boot-test</module>
+        <module>mybatis-demo</module>
     </modules>
     <build>
         <plugins>
