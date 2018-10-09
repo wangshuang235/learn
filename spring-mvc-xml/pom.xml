@@ -47,6 +47,22 @@
             <artifactId>spring-webmvc</artifactId>
             <version>5.0.2.RELEASE</version>
         </dependency>
+        <!-- 使用spring4时需要使用jackson2.X的依赖 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.9.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.9.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.6</version>
+        </dependency>
 
     </dependencies>
 
