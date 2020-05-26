@@ -17,8 +17,8 @@ public class TestOSS {
     private static final String endPoint = "https://oss-cn-beijing.aliyuncs.com";
 
     // accessKeyId和accessKeySecret OSS的访问密钥
-    private static final String accessKeyId = "LTAI94Ox9mPDA7WS";
-    private static final String accessKeySecret = "WGBQP6kPUBV93OEClkjQeoRvL0ok9w";
+    private static final String accessKeyId = "********";
+    private static final String accessKeySecret = "****************";
 
     // Bucket 用来管理所存储Object的存储空间
     private static String bucketName = "test4wangshuang";
