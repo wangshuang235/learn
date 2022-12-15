@@ -45,7 +45,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>5.0.2.RELEASE</version>
+            <version>5.2.20.RELEASE</version>
         </dependency>
         <!-- 使用spring4时需要使用jackson2.X的依赖 -->
         <dependency>
